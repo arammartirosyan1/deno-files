@@ -8,18 +8,34 @@ const mainRouter = new Router();
 
 mainRouter
     .get("/", async (ctx) => {
-        const template = `<body>
-  <% if (name) { %>
-    <h1>hello, <%= name %>!</h1>
-  <% } %>
-</body>`;
-
         ctx.response.body = await renderFile(`${cwd()}/public/main/index2.ejs`, {
             name: "world",
           });
     })
-    .get("/:id",(ctx) => {
-        ctx.response.body = "id page"
+    .get("/:id", async (ctx) => {
+        const id = ctx.request.url.searchParams.get("id");
+
+        const url = "https://prod-108.westeurope.logic.azure.com:443/workflows/cbf9f189541f4b38a1c0204570933932/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=j19ZpP6zcDynbRqaKNmYcnEGkt5WcydmJxeQyedj804";
+        const body = `{"id": "${id}"}`;
+
+        console.log(body)
+        const response = await fetch(url, {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+            'Secret': '57964aa2-6c3e-4710-8881-e1da54eb3938'
+        },
+        body,
+        });
+
+        if(!response.ok) console.log(response)
+
+        const jsonData = await response.json();
+        console.log(jsonData)                 
+
+        ctx.response.body = await renderFile(`${cwd()}/public/main/index2.ejs`, {
+            name: "world",
+          });
     });
 
 
