@@ -1,35 +1,36 @@
 import { Router } from "./shared/dependencies.ts";
 import { Application } from "./shared/dependencies.ts";
-import * as path from "https://deno.land/std@0.146.0/path/mod.ts";
+import {
+  viewEngine,
+  engineFactory,
+  adapterFactory
+} from 'https://deno.land/x/view_engine@v1.3.0/mod.ts';
 
-
-
-const moduleDir = path.dirname(path.fromFileUrl(import.meta.url));
-
-// The public directory (with "index.html" in it)
-const publicDir = path.join(moduleDir, "public");
-
-// A helper function to get the file contents
-// of a specific file path in the public directory
-function getPublicFile(...filePath: string[]): Promise<Uint8Array> {
-  return Deno.readFile(path.join(publicDir, ...filePath));
-}
 
 
 const app = new Application();
 // app.use(idMiddleware);
+const ejsEngine = engineFactory.getEjsEngine();
+const oakAdapter = adapterFactory.getOakAdapter();
+
+app.use(viewEngine(oakAdapter, ejsEngine));
+
 
 const mainRouter = new Router();
 
 mainRouter
     .get("/", (ctx) => {
-    ctx.response.body = getPublicFile("main/index.html");
-    ctx.response.type = "text/html";
+        const test = fetch("./public/download/index.html")
+        ctx.response.body = test
     })
     .get("/:id",(ctx) => {
-        ctx.response.body = getPublicFile("main/index.html/:id");
+        ctx.response.body = "id page"
     });
 
+
+
+app.use(mainRouter.routes())
+app.use(mainRouter.allowedMethods());
 
 await app.listen({ port: 8000 });
 
