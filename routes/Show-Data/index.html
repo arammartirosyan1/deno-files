@@ -1,0 +1,776 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>Անձնական թերթիկ</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script type="text/javascript"
+		src="index.js">
+	  </script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        .header img {
+            width: 15%;
+        }
+        
+        .header {
+            width: 18cm;
+            margin: 0.3cm auto;
+            display: flex;
+        }
+        
+        div.h3 {
+            margin: auto;
+            font-size: 15px;
+            font-weight: bold;
+        }
+        
+        .first-container {
+            width: 19.2cm;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+        }
+        
+        .first-container h8 {
+            font-size: 13px;
+            font-weight: bold;
+        }
+        
+        .first-container .line-1 {
+            font-size: 18.5px;
+        }
+        
+        .first-container h9 {
+            font-size: 13px;
+            font-weight: bold;
+        }
+        
+        .full-width {
+            width: 10.4cm;
+            height: 0.6cm;
+            margin: 3px;
+        }
+        
+        .half-width {
+            width: 3cm;
+            margin: 3px;
+            height: 0.6cm;
+        }
+        
+        .right-1 {
+            margin-right: 36px;
+        }
+        
+        .right-2 {
+            margin-right: 5px;
+        }
+        
+        .right-3 {
+            margin-right: 17px;
+        }
+        
+        .picture {
+            width: 3cm;
+            height: 3.5cm;
+        }
+        
+        .second-container {
+            width: 19.2cm;
+            margin: 0 auto;
+        }
+        
+        .second-container span {
+            font-weight: bold;
+            font-size: 13px;
+            height: 0.77cm;
+        }
+        
+        .second-container h9 {
+            font-size: 13px;
+            height: 0.77cm;
+        }
+        
+        .second-container h6 {
+            height: 0.78cm;
+        }
+        
+        .second-container .education {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+        
+        .second-container .first-line input,
+        .second-container .third-line input {
+            width: 6.6cm;
+            height: 0.6cm;
+            margin: 3px;
+        }
+        
+        .second-container .second-line input {
+            width: 2cm;
+            height: 0.6cm;
+            margin: 3px;
+        }
+        
+        .second-container h10 {
+            font-size: 12px;
+            height: 0.77cm;
+            margin-left: 25px;
+        }
+        
+        .third-container {
+            width: 19.2cm;
+            margin: 0 auto;
+        }
+        
+        .third-container h9 {
+            font-size: 13px;
+            height: 0.77cm;
+        }
+        
+        .third-container h10 {
+            font-size: 12px;
+            height: 0.77cm;
+            margin-left: 4px;
+        }
+        
+        .third-container .line h10 {
+            font-size: 12px;
+            height: 0.77cm;
+            margin-left: 40px;
+        }
+        
+        .third-container h8 {
+            height: 0.78cm;
+            font-weight: bold;
+            font-size: 13px;
+            margin-right: 0.2cm;
+        }
+        
+        .third-container h6 {
+            height: 0.78cm;
+        }
+        
+        .third-container input {
+            width: 3.3cm;
+            height: 0.6cm;
+        }
+        
+        .third-container .education {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+        
+        .third-container .line input {
+            width: 4.4cm;
+            height: 0.6cm;
+            margin: 3px 5px;
+        }
+        
+        .third-container .line-1 input {
+            width: 3.2cm;
+            height: 0.6cm;
+            margin: 3px 13px;
+        }
+        
+        .fourth-container {
+            width: 19.2cm;
+            margin: 0 auto;
+            display: flex;
+            margin-top: 15px;
+        }
+        
+        .fourth-container .first-line p {
+            height: 0.77cm;
+            font-size: 13px;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+        
+        .fourth-container .small-width {
+            width: 1cm;
+            height: 0.6cm;
+            margin: 18px 10px 0px;
+        }
+        
+        .fourth-container .third-line {
+            margin: 0px 15px 0px;
+            margin-top: 17px;
+        }
+        
+        .fourth-container .third-line h8 {
+            height: 0.77cm;
+            font-size: 12px;
+            margin-top: 20px;
+        }
+        
+        .fourth-container .small-width-1 {
+            width: 1.5cm;
+            height: 0.6cm;
+            margin: 23px 20px;
+        }
+        
+        .fourth-container .fourth-line {
+            margin: 0px 20px;
+        }
+        
+        .fourth-container h10 {
+            font-size: 10px;
+            margin: 5px 30px;
+        }
+        
+        .fourth-container .half-width-2 {
+            margin-top: 14px;
+            width: 2.5cm;
+            height: 0.6cm;
+        }
+        
+        .fourth-container .fourth-line p {
+            margin-top: 14px;
+            font-size: 12px;
+        }
+        
+        .fourth-container .fifth-line {
+            margin-left: 7px;
+        }
+        
+        .fourth-container .half-width {
+            width: 2.5cm;
+            height: 0.6cm;
+            margin: 0px 0;
+        }
+        
+        .fourth-container .half-width-3 {
+            width: 2.5cm;
+            height: 0.6cm;
+            margin-top: 13px;
+        }
+        
+        .fifth-container {
+            width: 19.2cm;
+            margin: 0 auto;
+        }
+        
+        .fifth-container span {
+            height: 0.77cm;
+            font-size: 13px;
+            font-weight: bold;
+        }
+        
+        .fifth-container h10 {
+            height: 0.78cm;
+            font-size: 12px;
+            text-align: center;
+            margin-top: 10px;
+            margin-left: 20px;
+        }
+        
+        .fifth-container .mid {
+            margin-left: 65px;
+            margin-right: 10px;
+        }
+        
+        .fifth-container .education {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+        
+        .fifth-container .first-line input {
+            width: 4cm;
+            height: 0.6cm;
+            margin: 3px 20px;
+        }
+        
+        .fifth-container .second-line input {
+            width: 6cm;
+            height: 0.6cm;
+            margin: 3px 10px;
+        }
+        
+        .fifth-container h9 {
+            height: 0.78cm;
+            font-size: 12px;
+            margin-top: 10px;
+            margin-left: 140px;
+        }
+        
+        .fifth-container .third-line input {
+            width: 8.7cm;
+            height: 0.6cm;
+            margin: 5px 10px;
+        }
+        
+        .fifth-container .full-line input {
+            width: 18cm;
+            height: 0.6cm;
+            margin: 5px 10px;
+        }
+        
+        .fifth-container h8 {
+            height: 0.78cm;
+            font-size: 12px;
+            margin-top: 10px;
+            margin-left: 340px;
+        }
+        
+        .sixth-container {
+            width: 19.2cm;
+            margin: 0 auto;
+        }
+        
+        .sixth-container span {
+            height: 0.77cm;
+            font-size: 13px;
+            font-weight: bold;
+        }
+        
+        .sixth-container .sixth {
+            height: 0.78cm;
+            font-size: 12px;
+            margin-top: 10px;
+            margin-left: 130px;
+        }
+        
+        .sixth-container h10 {
+            height: 0.78cm;
+            font-size: 12px;
+            margin-top: 10px;
+            margin-left: 40px;
+        }
+        
+        .sixth-container .education {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+        
+        .sixth-container .first-line input,
+        .sixth-container .third-line input {
+            width: 4.5cm;
+            height: 0.6cm;
+            margin: 3px 10px;
+        }
+        
+        .sixth-container .second-line input {
+            width: 8.5cm;
+            height: 0.6cm;
+            margin: 3px 10px;
+        }
+        
+        .seventh-container {
+            width: 19.2cm;
+            margin: 0 auto;
+        }
+        
+        .seventh-container span {
+            height: 0.77cm;
+            font-size: 13px;
+            font-weight: bold;
+        }
+        
+        .seventh-container .first-line h10 {
+            height: 0.78cm;
+            font-size: 12px;
+            margin-top: 10px;
+            margin-left: 40px;
+        }
+        
+        .seventh-container .second-line h10 {
+            height: 0.78cm;
+            font-size: 12px;
+            margin-top: 10px;
+            margin-left: 100px;
+        }
+        
+        .seventh-container .first-line input,
+        .seventh-container .second-line input {
+            width: 9cm;
+            height: 0.6cm;
+            margin: 3px 10px;
+        }
+        
+        .seventh-container .education {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+        
+        .seventh-container .third-line h9 {
+            height: 0.78cm;
+            font-size: 11px;
+            margin-top: 10px;
+            margin-left: 15px;
+        }
+        
+        .seventh-container .third-line h10 {
+            height: 0.78cm;
+            font-size: 11px;
+            margin-top: 10px;
+            margin-left: 40px;
+        }
+        
+        .seventh-container .third-line input {
+            width: 4cm;
+            height: 0.6cm;
+            margin: 3px 15px;
+        }
+        
+        .seventh-container .fourth-line h10 {
+            height: 0.78cm;
+            font-size: 11px;
+            margin-top: 10px;
+            margin-left: 270px;
+        }
+        
+        .seventh-container .fourth-line input {
+            width: 18.5cm;
+            height: 0.6cm;
+            margin: 5px 10px;
+        }
+        
+        .eighth-container {
+            width: 19.2cm;
+            margin: 0 auto;
+        }
+        
+        .eighth-container .education {
+            display: flex;
+        }
+        
+        .eighth-container .education .text p {
+            height: 0.78cm;
+            font-size: 12px;
+            text-align: justify;
+            margin: 20px 10px;
+        }
+        
+        .eighth-container .education .first-line p {
+            height: 0.78cm;
+            font-size: 12px;
+            margin: 29px;
+        }
+        
+        .eighth-container .education .second-line input {
+            width: 4cm;
+            height: 0.6cm;
+            margin: 24px 8px 14px;
+        }
+    </style>
+</head>
+
+<body>
+    <form>
+        <div class="header">
+            <img src="img.png" alt="logo">
+            <div class="h3">Անձնական թերթիկ</div>
+        </div>
+
+        <div class="first-container">
+            <div class="line-1">
+                <h8>1.Անուն, ազգանուն, հայրանուն</h8><br>
+                <h8>2.Ծննդյան ամսաթիվ</h8><br>
+                <h8>4.Քաղաքացիություն</h8><br>
+                <h8>5.Անձնագրի N</h8><br>
+                <h8>7.Սոց․քարտի N</h8><br>
+                <h8>9.Գրանցման հասցե</h8><br>
+                <h8>10.Բնակության հասցե</h8><br>
+                <h8>11.Քաղաքային հեռախոս</h8><br>
+                <h8>13.Էլ․փոստ</h8><br>
+            </div>
+            <div class="line-2">
+                <input name="name" type="text" class="full-width" style="margin-top: 0" /> <br />
+                <input name="birthdate" type="text" class="half-width" />
+                <h9>3.Ծննդյան վայր</h9>
+                <input name="place" type="text" class="half-width" style="width: 4.2cm;" /> <br />
+                <input name="citizenship" type="text" class="full-width" /> <br />
+                <input name="passport" type="text" class="half-width" style="width: 5.2cm;" />
+                <h9 class="right-1">6.Տրված</h9>
+                <input name="soc_card" type="text" class="half-width" style="width: 2.4cm;" /> <br />
+                <input name="soc_number" type="text" class="half-width" style="width: 5.2cm;" />
+                <h9 class="right-2">8.Ում կողմից</h9>
+                <input name="from_whom" type="text" class="half-width" style="width: 2.4cm;" /> <br />
+                <input name="registration_address" type="text" class="full-width" /> <br />
+                <input name="residence_address" type="text" class="full-width" /> <br />
+                <input name="city_number" type="tel" class="half-width" />
+                <h9 class="right-3">12.Բջջային հեռախոս</h9>
+                <input name="mobile_number" type="tel" class="half-width" style="width: 2.8cm;" /> <br />
+                <input name="address" type="text" class="full-width" /> <br />
+            </div>
+            <div>
+                <input type="text" class="picture" />
+            </div>
+        </div>
+        <div class="second-container"><br />
+            <h9><span>14.Կրթություն․</span> Խնդրում ենք նշել վերջին 4 ուսումնական հաստատությունները, որտեղ Դուք սովորել եք (դպրոց, ԲՈՒՀ և այլն)` սկսած վերջին ուսումնական հաստատությունից</h9>
+            <div class="education">
+                <div class="first-line">
+                    <h10>Հաստատության անվանում</h10>
+                    <input name="institution-1" type="text" /> <br>
+                    <input name="institution-2" type="text" /> <br>
+                    <input name="institution-3" type="text" /> <br>
+                    <input name="institution-4" type="text" /> <br>
+                </div>
+                <div class="second-line">
+                    <h10>ուսման տարեթվեր</h10>
+                    <input name="dates-of-study-1" type="text" /> <input type="text" /><br>
+                    <input name="dates-of-study-2" type="text" /> <input type="text" /><br>
+                    <input name="dates-of-study-3" type="text" /> <input type="text" /><br>
+                    <input name="dates-of-study-4" type="text" /> <input type="text" /><br>
+                </div>
+                <div class="third-line">
+                    <h10>մասնագիտություն</h10>
+                    <input name="profession-1" type="text" /> <br>
+                    <input name="profession-2" type="text" /> <br>
+                    <input name="profession-3" type="text" /> <br>
+                    <input name="profession-4" type="text" /> <br>
+                </div>
+            </div>
+        </div>
+        <div class="third-container"><br />
+            <h8>15.Ընտանեկան կարգավիճակը</h8><input type="text"><br />
+            <h9>
+                <h8>16.Ընտանիքի կազմը՝</h8>(ծնողներ, քույր, եղբայր, ամուսին/կին, երեխա)</h9>
+            <div class="education">
+                <div class="line-1">
+                    <h10>փոխկապակցվածություն</h10>
+                    <input name="fam-interconnectedness-1" type="text">
+                    <input name="fam-interconnectedness-2" type="text">
+                    <input name="fam-interconnectedness-3" type="text">
+                    <input name="fam-interconnectedness-4" type="text">
+                    <input name="fam-interconnectedness-5" type="text">
+                    <input name="fam-interconnectedness-6" type="text">
+                    <input name="fam-interconnectedness-7" type="text">
+                </div>
+                <div class="line">
+                    <h10>անուն, ազգանուն</h10>
+                    <input name="family-name-1" type="text">
+                    <input name="family-name-2" type="text">
+                    <input name="family-name-3" type="text">
+                    <input name="family-name-4" type="text">
+                    <input name="family-name-5" type="text">
+                    <input name="family-name-6" type="text">
+                    <input name="family-name-7" type="text">
+                </div>
+                <div class="line">
+                    <h10>աշխատանքի վայր</h10>
+                    <input name="workplace-1" type="text">
+                    <input name="workplace-2" type="text">
+                    <input name="workplace-3" type="text">
+                    <input name="workplace-4" type="text">
+                    <input name="workplace-5" type="text">
+                    <input name="workplace-6" type="text">
+                    <input name="workplace-7" type="text">
+                </div>
+                <div class="line">
+                    <h10>պաշտոն</h10>
+                    <input name="position-1" type="text">
+                    <input name="position-2" type="text">
+                    <input name="position-3" type="text">
+                    <input name="position-4" type="text">
+                    <input name="position-5" type="text">
+                    <input name="position-6" type="text">
+                    <input name="position-7" type="text">
+                </div>
+            </div>
+        </div>
+        <div class="fourth-container"><br />
+            <div class="first-line"><br>
+                <p>17.Զին ծառայություն</p>
+                <p>18.Վարորդական իրավունք</p>
+                <p>19.Դատվածության առկայություն</p>
+            </div>
+            <div class="second-line">
+                <input name="service" type="checkbox" class="small-width" /><br>
+                <input name="driving-license" type="checkbox" class="small-width" /><br>
+                <input name="conviction" type="checkbox" class="small-width" /><br>
+            </div>
+            <div class="third-line">
+                <h8>ծառայության ժամկետը՝</h8><br>
+                <h8>կարգը՝</h8>
+                <input name="order" type="text" class="small-width-1" /><br>
+                <h8>դատվածության ժամկետը՝</h8>
+            </div>
+            <div class="fourth-line">
+                <h10>սկսած</h10><br>
+                <input name="service-start" class="half-width"><br>
+                <p>տրման ամսաթիվ՝</p>
+                <input name="conviction-start" class="half-width-2"><br>
+            </div>
+            <div class="fifth-line">
+                <h10>մինչև</h10><br>
+                <input name="service-end" class="half-width"><br>
+                <input name="driving-date" class="half-width-3"><br>
+                <h10>մինչև</h10><br>
+                <input name="conviction-end" class="half-width"><br>
+            </div>
+        </div>
+        <div class="fifth-container"><br/>
+            <span>20.Եթե ունեք ծանոթ, բարեկամ կամ որևէ փոխկապակցված անձ այլ ապահովագրական ընկերություններում աշխատո (այդ թվում ԷՖԷՍ-ում),
+             ապա խնդրում ենք նշել փոխկապակցվաժության տեսակը, անուն, ազգանուն և ապահովագրական ընկերության անվանում</span>
+            <div class="education">
+                <div class="first-line">
+                    <h10>փոխկապակցվածություն</h10>
+                    <input name="emp-interconnectedness-1" type="text">
+                    <input name="emp-interconnectedness-2" type="text">
+                    <input name="emp-interconnectedness-3" type="text">
+                    <input name="emp-interconnectedness-4" type="text">
+                    <input name="emp-interconnectedness-5" type="text">
+                </div>
+                <div class="second-line">
+                    <h10 class="mid">անուն, ազգանուն</h10>
+                    <input name="employee-name-1" type="text">
+                    <input name="employee-name-2" type="text">
+                    <input name="employee-name-3" type="text">
+                    <input name="employee-name-4" type="text">
+                    <input name="employee-name-5" type="text">
+                </div>
+                <div class="second-line">
+                    <h10>ապահովագրական ընկերություն</h10>
+                    <input name="insurance-1" type="text">
+                    <input name="insurance-2" type="text">
+                    <input name="insurance-3" type="text">
+                    <input name="insurance-4" type="text">
+                    <input name="insurance-5" type="text">
+                </div>
+            </div>
+            <span>21.Եթե նախկինում ունեցել եք աշխատանքային փորձ, ապա նշեք ընկերությաան անունը և ձեր զբաղեցրած պաշտոնը</span>
+            <div class="education">
+                <div class="third-line">
+                    <h9>Ընկերություն</h9>
+                    <input name="company-1" type="text">
+                    <input name="company-2" type="text">
+                    <input name="company-3" type="text">
+                    <input name="company-4" type="text">
+                    <input name="company-5" type="text">
+                    <input name="company-6" type="text">
+                </div>
+                <div class="third-line">
+                    <h9>Պաշտոն</h9>
+                    <input name="company-position-1" type="text">
+                    <input name="company-position-2" type="text">
+                    <input name="company-position-3" type="text">
+                    <input name="company-position-4" type="text">
+                    <input name="company-position-5" type="text">
+                    <input name="company-position-6" type="text">
+                </div>
+            </div>
+            <span>22.ինչով եք սիրում զբաղվել ազատ ժամանակ</span>
+            <div class="full-line">
+                <h8>Հոբբի</h8>
+                <input name="hobby" type="text">
+            </div>
+            <span>23.Արդյոք դուք կամ ձեր ընտանիքի անդամներից որևիցէ մեկը հանդիսանում է անհատ ձեռներեց։ Եթե այո, ապա խնդրում ոնք նշել ոլորտը</span>
+            <div class="full-line">
+                <h8>Ոլորտ</h8>
+                <input name="sphere" type="text">
+            </div>
+        </div>
+        <div class="sixth-container"><br/>
+            <span>24.Նշեք երկու ոչ փոխկապակցված անձանց տվըալներ, ովքեր կարող եբ ձեր մասին տալ հետադարձ կապ</span>
+            <div class="education">
+                <div class="first-line">
+                    <h10>Անուն, ազգանուն</h10>
+                    <input name="relative-name-1" type="text">
+                    <input name="relative-name-2" type="text">
+                </div>
+                <div class="second-line">
+                    <h10 class="sixth">Պաշտոն</h10>
+                    <input name="relative-position-1" type="text">
+                    <input name="relative-position-2" type="text">
+                </div>
+                <div class="third-line">
+                    <h10>Հեռախոսահամար</h10>
+                    <input name="relative-phone-1" type="text">
+                    <input name="relative-phone-2" type="text">
+                </div>
+            </div>
+        </div>
+        <div class="seventh-container">
+            <span>25.Նշեք այն ապահովագրական ընկերության անվանումը, որում դուք կամ ձեր ընտանիքի անդամներից որևիցէ մեկը ունեցել է ապահովագրություն</span>
+            <div class="education">
+                <div class="first-line">
+                    <h10>Ապահովագրական ընկերության անվանում</h10>
+                    <input name="insurance-name-1" type="text">
+                    <input name="insurance-name-2" type="text">
+                    <input name="insurance-name-3" type="text">
+                </div>
+                <div class="second-line">
+                    <h10>Ապահովագրության տեսակ</h10>
+                    <input name="insurance-type-1" type="text">
+                    <input name="insurance-type-2" type="text">
+                    <input name="insurance-type-3" type="text">
+                </div>
+            </div>
+            <span>26.Նշեք ձեր ընտանիքի անդամներից որևիցէ մեկի տվյալները, ում հետ հնարավոր կլինի կապնվել ձեր բացակայության ժամանակ</span>
+            <div class="education">
+                <div class="third-line">
+                    <h9>Փոխկապակցվածություն</h9>
+                    <input name="family-member-1" type="text">
+                </div>
+                <div class="third-line">
+                    <h10>Անուն, ազգանուն</h10>
+                    <input name="family-member-2" type="text">
+                </div>
+                <div class="third-line">
+                    <h9>Քաղաքային հեռախոսահամար</h9>
+                    <input name="family-member-3" type="text">
+                </div>
+                <div class="third-line">
+                    <h9>Բջջային հեռախոսահամար</h9>
+                    <input name="family-member-4" type="text">
+                </div>
+            </div>
+            <span>27.Ապահովագրական ընկերության որ ստորաբաժանումում կցանկանայիք աշխատել</span>
+            <div class="education">
+                <div class="fourth-line">
+                    <h10>Ստորաբաժանաման անվանումը</h10>
+                    <input name="department-name" type="text">
+                </div>
+            </div>
+        </div>
+        <div class="eighth-container">
+            <div class="education">
+                <div class="text">
+                    <p>Սույնով հավաստում եմ, որ լրացված ամբողջ տեղեկատվությունը համապատասխանում է իրականությանը և որ դիտավորյալ չեմ թաքցրել որևէ ինֆորմացիա։ Պարտավորվում եմ վերոնշյալ տեղեկությունների մեջ փոփոխությունների դեպքում տեղեկացնել Ընկերությանը մեկ
+                        աշխատանքային շաբաթվա ընթացքում։</p>
+                </div>
+                <div class="first-line">
+                    <p>Ամսաթիվ</p>
+                    <p>Ստորագրություն</p>
+                </div>
+                <div class="second-line">
+                    <input name="date" type="text">
+                    <input name="signature" type="text">
+                </div>
+            </div>
+            <div>
+                <input type="submit" value="Submit">
+            </div>
+        </div>
+    </form>
+    <script type="text/javascript">
+      const { elements } = document.querySelector('form')
+      
+      for (const [ key, value ] of Object.entries(data) ) {
+        const field = elements.namedItem(key)
+        field && (field.value = value)
+      }
+      
+        </script>
+</body>
+
+</html>

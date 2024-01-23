@@ -1,0 +1,1 @@
+export const EmptyArrayError = "Supabase data array is empty."
