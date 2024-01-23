@@ -14,6 +14,7 @@ mainRouter
     })
     .get("/:id", async (ctx) => {
         const id = ctx.params.id;
+        console.log(ctx.params)
 
         const url = "https://prod-108.westeurope.logic.azure.com:443/workflows/cbf9f189541f4b38a1c0204570933932/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=j19ZpP6zcDynbRqaKNmYcnEGkt5WcydmJxeQyedj804";
         const body = `{"id": "${id}"}`;
@@ -28,7 +29,7 @@ mainRouter
         body,
         });
 
-        if(!response.ok) console.log(response)
+        if(!response.ok) console.log("issue")
 
         const jsonData = await response.json();
         console.log(jsonData)                 
