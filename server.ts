@@ -1,11 +1,6 @@
-import { indexOfNeedle } from "https://deno.land/std@0.200.0/bytes/index_of_needle.ts";
-import { idMiddleware } from "./middleware/idMiddleWare.ts";
-import { JWTAuthMiddleware } from "./middleware/jwtValidator.ts";
-import { logMiddleware } from "./middleware/logMiddleware.ts";
 import { Router } from "./shared/dependencies.ts";
 import { Application } from "./shared/dependencies.ts";
 import * as path from "https://deno.land/std@0.146.0/path/mod.ts";
-
 
 
 
