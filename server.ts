@@ -1,8 +1,8 @@
 import { Router } from "./shared/dependencies.ts";
 import { Application } from "./shared/dependencies.ts";
-import { render } from "https://deno.land/x/dejs@0.10.3/mod.ts";
+import { renderFile } from "https://deno.land/x/dejs@0.10.3/mod.ts";
 
-
+const { cwd } = Deno;
 const app = new Application();
 const mainRouter = new Router();
 
@@ -14,7 +14,7 @@ mainRouter
   <% } %>
 </body>`;
 
-        ctx.response.body = await render(template, {
+        ctx.response.body = await renderFile(`${cwd()}/main/index.ejs`, {
             name: "world",
           });
     })
