@@ -31,12 +31,12 @@ mainRouter
 
         if(!response.ok) console.log("issue")
 
-        const jsonData = await response.json();
-        console.log(jsonData)                 
+        const jsonData = await response.json()        
+        ctx.response.body = jsonData
 
-        ctx.response.body = await renderFile(`${cwd()}/public/main/index2.ejs`, {
-            name: "world",
-          });
+        // ctx.response.body = await renderFile(`${cwd()}/public/main/index2.ejs`, {
+        //     name: "world",
+        //   });
     });
 
 
