@@ -14,7 +14,7 @@ mainRouter
   <% } %>
 </body>`;
 
-        ctx.response.body = await renderFile(`${cwd()}/main/index.ejs`, {
+        ctx.response.body = await renderFile(`${cwd()}/public/main/index.ejs`, {
             name: "world",
           });
     })
