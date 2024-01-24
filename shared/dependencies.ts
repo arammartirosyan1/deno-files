@@ -1,4 +1,4 @@
-export { Application, Router } from "https://deno.land/x/oak@v12.6.1/mod.ts";
+export { Application, Router, helpers } from "https://deno.land/x/oak@v12.6.1/mod.ts";
 export type { Middleware } from "https://deno.land/x/oak@v12.6.1/mod.ts";
 export { Context } from "https://deno.land/x/oak@v12.6.1/mod.ts";
 export { createClient } from "https://esm.sh/@supabase/supabase-js@2.36.0";
