@@ -8,12 +8,14 @@ const { getQuery } = helpers;
 const { cwd } = Deno;
 const app = new Application();
 
-app.use(async (context) => {
-    await send(context, context.request.url.pathname, {
-      root: `${Deno.cwd()}/public`,
-      index: 'index.html',
-    });
-  });
+
+app.use(async (ctx, next) => {    
+    await send(ctx, ctx.request.url.pathname, {
+        root: `${Deno.cwd()}/public`,
+    })
+
+    next()
+});
 
 
 const mainRouter = new Router();
