@@ -14,7 +14,7 @@ const mainRouter = new Router();
 
 mainRouter
     .get("/", async (ctx) => {
-        ctx.response.body = await renderFile(`${cwd()}/public/main/index.ejs`, {
+        ctx.response.body = await renderFile(`${cwd()}/public/main/index2.ejs`, {
             name: "world",
           });
     })
