@@ -9,14 +9,6 @@ const { cwd } = Deno;
 const app = new Application();
 
 
-app.use(async (ctx, next) => {    
-    await send(ctx, ctx.request.url.pathname, {
-        root: `${Deno.cwd()}/public`,
-    })
-
-    next()
-});
-
 
 const mainRouter = new Router();
 

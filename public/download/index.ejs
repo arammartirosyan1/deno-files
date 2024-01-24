@@ -764,7 +764,7 @@
         const {
             elements
         } = document.querySelector('form')
-        const data = <%= jsonData  %>
+        const data = <%= JSON.stringify(jsonData) %>
 
         for (const [key, value] of Object.entries(data)) {
             const field = elements.namedItem(key)
