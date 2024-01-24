@@ -1,12 +1,14 @@
 import { Router } from "./shared/dependencies.ts";
-import { Application, send, helpers } from "./shared/dependencies.ts";
+import { Application, helpers } from "./shared/dependencies.ts";
 import { renderFile } from "https://deno.land/x/dejs@0.10.3/mod.ts";
+import staticFiles from "https://deno.land/x/static_files@1.1.6/mod.ts";
 
 
 
 const { getQuery } = helpers;
 const { cwd } = Deno;
 const app = new Application();
+app.use(staticFiles("public"));
 
 
 
